@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Poster Maker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Coin Poster Maker</h1>
+    <hr><br>
+    <form id="poster-form" class="mb-4">
+      <div class="form-group">
+        <label for="front-image">Front Image:</label>
+        <input type="file" id="front-image" accept=".png" class="form-control-file" required>
+      </div>
+      <div class="form-group">
+        <label for="back-image">Back Image:</label>
+        <input type="file" id="back-image" accept=".png" class="form-control-file" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" min="0" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="coin-title">Coin Title:</label>
+        <input type="text" id="coin-title" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="coin-weight">Coin Weight:</label>
+        <input type="number" id="coin-weight" min="0" step="0.1" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="coin-condition">Coin Condition:</label>
+        <input type="text" id="coin-condition" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="coin-number">Coin No.:</label>
+        <input type="text" id="coin-number" class="form-control" required>
+      </div><br>
+      <button type="button" id="generate-poster" class="btn btn-primary btn-block">Generate Poster</button>
+    </form>
+    <div id="poster-container" class="text-center d-none">
+      <canvas id="poster-canvas" width="800" height="600"></canvas>
+      <button type="button" id="download-poster" class="btn btn-success btn-block mt-3">Download Poster</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
